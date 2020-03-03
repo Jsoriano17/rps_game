@@ -191,6 +191,29 @@ win loss draw
     z-index: 1;
 }
 
+.win_game {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 40%;
+    z-index: 1;
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-weight: 150;
+}
+
+.lose_game {
+    display: none;
+    position: absolute;
+    top: 90px;
+    left: 40%;
+    z-index: 1;
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-weight: 150;
+}
 /*****************
 rps
 *****************/

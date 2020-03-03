@@ -15,9 +15,12 @@ const paper = document.querySelector('.p')
 const scissors = document.querySelector('.s')
 const playerScoreBoard = document.getElementById('player')
 const computerScoreBoard = document.getElementById('computer')
+const colon = document.getElementById('colon')
 const winMessage = document.querySelector('.win')
 const loseMessage = document.querySelector('.lose')
 const drawMessage = document.querySelector('.draw')
+const gameWin = document.querySelector('.win_game')
+const gameLose = document.querySelector('.lose_game')
 
 function computerChoice() {
 let rpsArr = ['r', 'p', 's'];
@@ -31,6 +34,16 @@ function win() {
     winMessage.style.display = 'block'
     loseMessage.style.display = 'none'
     drawMessage.style.display = 'none'
+    if(playerScore >= 10 ) {
+        playerScoreBoard.style.display = 'none'
+        computerScoreBoard.style.display = 'none'
+        colon.style.display = 'none'
+        gameWin.style.display = 'block'
+        winMessage.style.display = 'none'
+        loseMessage.style.display = 'none'
+        drawMessage.style.display = 'none'
+    } else {
+    }
     console.log(win);
 }
 
@@ -47,6 +60,16 @@ function lose() {
     winMessage.style.display = 'none'
     loseMessage.style.display = 'block' 
     drawMessage.style.display = 'none'
+    if(computerScore >= 10 ) {
+        playerScoreBoard.style.display = 'none'
+        computerScoreBoard.style.display = 'none'
+        colon.style.display = 'none'
+        gameLose.style.display = 'block'
+        winMessage.style.display = 'none'
+        loseMessage.style.display = 'none'
+        drawMessage.style.display = 'none'
+    } else {
+    }
     console.log(lose);
 
 }
@@ -88,7 +111,7 @@ function main() {
   };
 
 
-main();
+
 
 
 //button hover
@@ -113,6 +136,14 @@ buttonClick.addEventListener('click', function () {
     winMessage.style.display = 'none'
     loseMessage.style.display = 'none'
     drawMessage.style.display = 'none'
+    // playerScoreBoard.style.display = 'unset'
+    // computerScoreBoard.style.display = 'unset'
+    colon.style.display = 'unset'
     let playerScoreBoard = document.getElementById('player').innerHTML = 0;
     let computerScoreBoard = document.getElementById('computer').innerHTML = 0;
+    gameLose.style.display = 'none'
+    gameWin.style.display = 'none'
+   
 })
+
+main();
