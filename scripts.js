@@ -15,6 +15,9 @@ const paper = document.querySelector('.p')
 const scissors = document.querySelector('.s')
 const playerScoreBoard = document.getElementById('player')
 const computerScoreBoard = document.getElementById('computer')
+const winMessage = document.querySelector('.win')
+const loseMessage = document.querySelector('.lose')
+const drawMessage = document.querySelector('.draw')
 
 function computerChoice() {
 let rpsArr = ['r', 'p', 's'];
@@ -25,20 +28,28 @@ return rpsArr[randomNumber];
 function win() {
     playerScore++;
     playerScoreBoard.innerHTML = playerScore;
+    winMessage.style.display = 'block'
+    loseMessage.style.display = 'none'
+    drawMessage.style.display = 'none'
     console.log(win);
 }
 
 function draw() {
+    winMessage.style.display = 'none'
+    loseMessage.style.display = 'none'
+    drawMessage.style.display = 'block'
     console.log(draw);
 }
 
 function lose() {
     computerScore++;
     computerScoreBoard.innerHTML = computerScore;
+    winMessage.style.display = 'none'
+    loseMessage.style.display = 'block' 
+    drawMessage.style.display = 'none'
     console.log(lose);
 
 }
-
 
 function game(userChoice) {
     const getComputerChoice = computerChoice();
@@ -95,16 +106,13 @@ buttonClick.addEventListener('mouseout', function () {
 })
 
 //reset
-button.addEventListener('click', function () {
-    playerScore = 0;
-    computerScore = 0;
-    let playerScoreBoard = document.getElementById('player').innerHTML = 0;
-    let computerScoreBoard = document.getElementById('computer').innerHTML = 0;
-});
 
 buttonClick.addEventListener('click', function () {
     playerScore = 0;
     computerScore = 0;
+    winMessage.style.display = 'none'
+    loseMessage.style.display = 'none'
+    drawMessage.style.display = 'none'
     let playerScoreBoard = document.getElementById('player').innerHTML = 0;
     let computerScoreBoard = document.getElementById('computer').innerHTML = 0;
 })

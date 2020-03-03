@@ -19,6 +19,13 @@ p {
     font-weight: 150;
 }
 
+h3 {
+    font-size: 35px;
+    font-family: 'Amatic SC', cursive;
+    text-align: center;
+    font-weight: 150;
+}
+
 a {
     text-decoration: none;
     color: black;
@@ -124,7 +131,7 @@ score board
 
 .number_con {
     position: absolute;
-    top: 45px;
+    top: 35px;
     left: 43%;
     z-index: 1;
 }
@@ -154,6 +161,34 @@ score board
     position: absolute;
     top: 150px;
     right: 100px;
+}
+
+/*****************
+win loss draw
+*****************/
+
+.win {
+    display: none;
+    position: absolute;
+    top: 175px;
+    left: 45%;
+    z-index: 1;
+}
+
+.lose {
+    display: none;
+    position: absolute;
+    top: 175px;
+    left: 45.5%;
+    z-index: 1;
+}
+
+.draw {
+    display: none;
+    position: absolute;
+    top: 175px;
+    left: 44.5%;
+    z-index: 1;
 }
 
 /*****************
